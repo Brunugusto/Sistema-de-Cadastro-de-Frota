@@ -20,7 +20,6 @@ int Carro::AlterarVeiculo()
 {
 	Veiculo::MenuAlterar();
 	std::cout << "4 - Cavalos\n";
-	Veiculo::AlterarVeiculo();
 	int ope = Veiculo::AlterarVeiculo();
 	if (ope < 3)
 	{
