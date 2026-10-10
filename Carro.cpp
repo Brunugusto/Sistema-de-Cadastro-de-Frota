@@ -6,8 +6,7 @@ void Carro::AdicionarVeiculo()
 	std::cout << "---- CADASTRAR CARRO ----\n\n";
 	Veiculo::AdicionarVeiculo();
 	std::cout << "Insira a quantidade de cavalos de potência do carro: ";
-	std::cin >> cavalos;
-	std::cin.ignore((std::numeric_limits<std::streamsize>::max)(), '\n');
+	this->cavalos = LerInt();
 	std::cout << "\nCarro cadastrado com sucesso!\n\n";
 }
 void Carro::ExibirVeiculos() const
@@ -21,12 +20,11 @@ int Carro::AlterarVeiculo()
 	Veiculo::MenuAlterar();
 	std::cout << "4 - Cavalos\n";
 	int ope = Veiculo::AlterarVeiculo();
-	if (ope < 3)
+	if (ope < 4)
 	{
 		return ope;
 	}
 	std::cout << "\nInsira a nova quantidade de cavalos do carro: ";
-	std::cin >> this->cavalos;
-	std::cin.ignore((std::numeric_limits<std::streamsize>::max)(), '\n');
+	this->cavalos = LerInt();
 	return ope;
 }

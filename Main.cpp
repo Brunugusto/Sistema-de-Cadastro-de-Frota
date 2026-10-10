@@ -16,8 +16,7 @@ int main()
 	{
 		Title();
 		std::cout << "\n1 - Cadastrar novo veículo\n2 - Exibir veículos cadastrados\n3 - Alterar cadastro de veículo\n4 - Deletar veículo\n5 - Sair\n\nEscolha a opção que deseja realizar: ";
-		std::cin >> ope;
-		std::cin.ignore((std::numeric_limits<std::streamsize>::max)(), '\n');
+		ope = LerInt();
 		switch (ope)
 		{
 		case 1: {
@@ -27,8 +26,7 @@ int main()
 				system("CLS");
 				std::cout << "=====CADASTRAR VEÍCULO=====\n\n";
 				std::cout << "1 - Cadastrar moto\n2 - Cadastrar carro\n3 - Cadastar navio\n4 - Cadastrar avião\n\nEscolha o que deseja cadastrar: ";
-				std::cin >> tipo;
-				std::cin.ignore((std::numeric_limits<std::streamsize>::max)(), '\n');
+				tipo = LerInt();
 			} while (Verifyin(tipo, 1, 4));
 			sistema.AddV(tipo);
 			break;
@@ -43,8 +41,7 @@ int main()
 			std::cout << "======ALTERAR VEÍCULO=====\n\n";
 			sistema.ExibirV();
 			std::cout << "Insira o ID do veículo a ser alterado: ";
-			std::cin >> id;
-			std::cin.ignore((std::numeric_limits<std::streamsize>::max)(), '\n');
+			id = LerInt();
 			sistema.AlterarV(id);
 			break;
 		}
@@ -53,8 +50,7 @@ int main()
 			std::cout << "=====DELETARAR VEÍCULO=====\n\n";
 			sistema.ExibirV();
 			std::cout << "Insira o ID do veículo a ser deletado: ";
-			std::cin >> id;
-			std::cin.ignore((std::numeric_limits<std::streamsize>::max)(), '\n');
+			id = LerInt();
 			sistema.DeletarV(id);
 			break;
 		}

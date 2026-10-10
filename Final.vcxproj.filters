@@ -41,31 +41,31 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Veiculo.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Verifier.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Moto.h">
-      <Filter>Source Files</Filter>
+    <ClInclude Include="Aviao.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Carro.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Navio.h">
-      <Filter>Source Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Aviao.h">
-      <Filter>Source Files</Filter>
+      <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Control.h">
-      <Filter>Source Files</Filter>
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Moto.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Navio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Veiculo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Verifier.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include=".gitignore">
-      <Filter>Source Files</Filter>
+      <Filter>Resource Files</Filter>
     </None>
   </ItemGroup>
 </Project>

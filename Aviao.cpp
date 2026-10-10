@@ -6,8 +6,7 @@ void Aviao::AdicionarVeiculo()
 	std::cout << "---- CADASTRAR AVIÃO ----\n\n";
 	Veiculo::AdicionarVeiculo();
 	std::cout << "Insira a metragem do avião: ";
-	std::cin >> this->metros;
-	std::cin.ignore((std::numeric_limits<std::streamsize>::max)(), '\n');
+	this->metros = LerInt();
 	std::cout << "\nAvião cadastrado com sucesso!\n\n";
 }
 void Aviao::ExibirVeiculos() const
@@ -20,14 +19,12 @@ int Aviao::AlterarVeiculo()
 {
 	Veiculo::MenuAlterar();
 	std::cout << "4 - Metragem\n";
-	Veiculo::AlterarVeiculo();
 	int ope = Veiculo::AlterarVeiculo();
-	if (ope < 3)
+	if (ope < 4)
 	{
 		return ope;
 	}
 	std::cout << "\nInsira a nova metragem do avião: ";
-	std::cin >> this->metros;
-	std::cin.ignore((std::numeric_limits<std::streamsize>::max)(), '\n');
+	this->metros = LerInt();
 	return ope;
 }

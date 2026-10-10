@@ -1,5 +1,4 @@
 #include <iostream>
-#include <limits>
 #include "Veiculo.h"
 
 void Veiculo::AdicionarVeiculo()
@@ -9,8 +8,7 @@ void Veiculo::AdicionarVeiculo()
 	std::cout << "Insira o modelo do veículo: ";
 	std::getline(std::cin, this->modelo);
 	std::cout << "Insira o ano do modelo: ";
-	std::cin >> ano;
-	std::cin.ignore((std::numeric_limits<std::streamsize>::max)(), '\n');
+	ano = LerInt();
 }
 void Veiculo::ExibirVeiculos() const
 {
@@ -26,13 +24,12 @@ int Veiculo::AlterarVeiculo()
 	do
 	{
 		std::cout << "\nEscolha o que deseja alterar: ";
-		std::cin >> ope;
+		ope = LerInt();
 	} while (Verifyin(ope, 1, 4));
 	if (ope > 3)
 	{
 		return ope;
 	}
-	std::cin.ignore((std::numeric_limits<std::streamsize>::max)(), '\n');
 		switch (ope)
 		{
 		case 1:
@@ -45,8 +42,7 @@ int Veiculo::AlterarVeiculo()
 			break;
 		case 3:
 			std::cout << "\nInsira o novo ano do modelo: ";
-			std::cin >> this->ano;
-			std::cin.ignore((std::numeric_limits<std::streamsize>::max)(), '\n');
+			this->ano = LerInt();
 			break;
 		}
 		return ope;

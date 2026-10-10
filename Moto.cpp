@@ -6,8 +6,7 @@ void Moto::AdicionarVeiculo()
 	std::cout << "---- CADASTRAR MOTO ----\n\n";
 	Veiculo::AdicionarVeiculo();
 	std::cout << "Insira a quantidade de cilindradas da moto: ";
-	std::cin >> this->cilindradas;
-	std::cin.ignore((std::numeric_limits<std::streamsize>::max)(), '\n');
+	this->cilindradas = LerInt();
 	std::cout << "\nMoto cadastrada com sucesso!\n\n";
 }
 void Moto::ExibirVeiculos() const
@@ -20,14 +19,12 @@ int Moto::AlterarVeiculo()
 {
 	Veiculo::MenuAlterar();
 	std::cout << "4 - Cilindradas\n";
-	Veiculo::AlterarVeiculo();
 	int ope = Veiculo::AlterarVeiculo();
-	if (ope < 3)
+	if (ope < 4)
 	{
 		return ope;
 	}
 	std::cout << "\nInsira a nova quantidade de cilindradas do veículo: ";
-	std::cin >> this->cilindradas;
-	std::cin.ignore((std::numeric_limits<std::streamsize>::max)(), '\n');
+	this->cilindradas = LerInt();
 	return ope;
 }

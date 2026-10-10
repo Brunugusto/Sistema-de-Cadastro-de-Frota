@@ -6,8 +6,7 @@ void Navio::AdicionarVeiculo()
 	std::cout << "---- CADASTRAR NAVIO ----\n\n";
 	Veiculo::AdicionarVeiculo();
 	std::cout << "Insira a quantidade de pés máxima deste navio: ";
-	std::cin >> this->pes;
-	std::cin.ignore((std::numeric_limits<std::streamsize>::max)(), '\n');
+	this->pes = LerInt();
 	std::cout << "\nNavio cadastrado com sucesso!\n\n";
 }
 void Navio::ExibirVeiculos() const
@@ -20,14 +19,12 @@ int Navio::AlterarVeiculo()
 {
 	Veiculo::MenuAlterar();
 	std::cout << "4 - Pés\n";
-	Veiculo::AlterarVeiculo();
 	int ope = Veiculo::AlterarVeiculo();
-	if (ope < 3)
+	if (ope < 4)
 	{
 		return ope;
 	}
 	std::cout << "\nInsira a nova quantidade pés do navio: ";
-	std::cin >> this->pes;
-	std::cin.ignore((std::numeric_limits<std::streamsize>::max)(), '\n');
+	this->pes = LerInt();
 	return ope;
 }
